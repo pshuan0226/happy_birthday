@@ -1,7 +1,9 @@
-import vlc
-import random
+#!/usr/bin/python 
 
-p = vlc.MediaPlayer("./hb.mp3")
+import pygame
+
+pygame.mixer.init(44100, -16, 2, 2048)
+hb = pygame.mixer.Sound("hp.mp3")
 
 while 1:
     print("""
@@ -13,7 +15,10 @@ while 1:
     """)
     user = raw_input("What would you like? ")
     if user == "1":
-        p.play()
+    	try:
+        	pygame.mixer.Sound.play(hb)
+        except:
+        	print("Sorry mom I failed you :-(")
     elif user == "2":
         print("""
             (      \              .-'    `-.              /   )____
