@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 
 import pygame
 
@@ -17,6 +17,7 @@ while 1:
     if user == "1":
     	try:
         	pygame.mixer.Sound.play(hb)
+            pygame.event.wait()
         except:
         	print("Sorry mom I failed you :-(")
     elif user == "2":
