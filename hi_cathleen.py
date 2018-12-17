@@ -13,10 +13,10 @@ while 1:
     3) A Cake
     4) Love?
     """)
-    user = raw_input("What would you like? ")
+    user = raw_input("What would you like (Press anything else to quit)? ")
     if user == "1":
     	try:
-        	pygame.mixer.Sound.play(hb)
+            pygame.mixer.Sound.play(hb)
             pygame.event.wait()
         except:
         	print("Sorry mom I failed you :-(")
